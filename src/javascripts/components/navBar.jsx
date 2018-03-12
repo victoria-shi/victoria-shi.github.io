@@ -5,6 +5,7 @@ import 'css/components/navBar.scss';
 function NavBar(props) {
   return (
     <div id="navBar">
+    	<div className="logo"></div>
       <a href="/">Home</a>	
       <a href="/resume">Code</a>
       <a href="/art">Design + Art</a>

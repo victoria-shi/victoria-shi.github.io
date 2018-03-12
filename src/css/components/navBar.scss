@@ -3,7 +3,17 @@
 #navBar {
   padding: 16px;
   border-bottom: 1px solid white;
+  .logo {
+    background: url('../../images/logo.png') no-repeat center center;
+    background-size: contain;
+    height: 64px;
+    width: 64px;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: bottom;
+  }
   a {
     padding: 0 8px;
+    vertical-align: bottom;
   }
 }
