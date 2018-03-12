@@ -1,5 +1,7 @@
 import React from 'react';
 
+import 'css/components/navBar.scss';
+
 function NavBar(props) {
   return (
     <div id="navBar">

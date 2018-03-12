@@ -1,0 +1,34 @@
+.resume {
+  display: flex;
+  flex-wrap: wrap;
+  .resumeSection {
+    flex-grow: 1;
+    margin: 16px;
+    font-family: 'Vollkorn', sans-serif;
+    font-size: 14px;
+    .index {
+      font-weight: bold;
+      font-size: 32px;
+      border-bottom: 5px solid black;
+    }
+    > .title {
+      text-align: center;
+      padding: 24px 0;
+      border-bottom: 2px solid black;
+      margin-bottom: 8px;
+    }
+    &.experience {
+      flex-grow: 2;
+    }
+  }
+  .roleSection {
+    padding: 8px 0;
+    &:not(:last-of-type) {
+      border-bottom: 2px solid black;
+    }
+    .title,
+    .dates {
+      font-weight: 700;
+    }
+  }
+}
