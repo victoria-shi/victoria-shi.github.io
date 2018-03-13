@@ -3,13 +3,15 @@
 .letterWorld {
   input,
   .image {
-    vertical-align: bottom;
+    vertical-align: middle;
     display: inline-block;
   }
   input {
-    margin-right: 16px;
+    margin: 16px 0;
   }
   .image {
+    cursor: pointer;
+    margin-right: 16px;
     @include transition(background 0.5s);
     height: 360px;
     width: 360px;

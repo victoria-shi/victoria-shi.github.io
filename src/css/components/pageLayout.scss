@@ -1,4 +1,5 @@
 @import '../variables.scss';
+@import '../mixin.scss';
 
 #pageLayout {
   position: absolute;
@@ -14,15 +15,38 @@
     box-sizing: border-box;
   }
   #navBar {
-    width: 240px;
+    @include transition(width 0.25s);
+    transition-timing-function: ease-in;
+    width: 120px;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
+    &:hover {
+      width: 240px;
+    }
   }
   #content {
-    margin-left: 240px;
-    width: calc(100% - 240px);
+    margin-left: 120px;
+    width: calc(100% - 120px);
     padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  #pageLayout {
+    #content,
+    #navBar {
+      display: block;
+    }
+    #navBar,
+    #navBar:hover {
+      width: 100%;
+      position: initial;
+    }
+    #content {
+      margin: 0;
+      width: 100%;
+    }
   }
 }

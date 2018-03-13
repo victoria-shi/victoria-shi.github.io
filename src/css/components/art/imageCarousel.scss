@@ -1,0 +1,13 @@
+@import '../../mixin';
+
+.imageCarousel {
+  .image {
+    cursor: pointer;
+    width: 480px;
+    height: 320px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include transition(background 0.5s);
+  }
+}

@@ -1,23 +1,50 @@
 @import '../variables.scss';
+@import '../mixin.scss';
 
 #navBar {
   padding: 16px;
   text-align: center;
   background-color: white;
+  box-shadow: 1px 0px 4px 1px rgba(0,0,0,0.08);
+  &:hover {
+    .logo {
+      height: 120px;
+      width: 120px;
+    }
+    .linksFull {
+      visibility: visible;
+      opacity: 1;
+    }
+    .linksShort {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
   .logo {
     background: url('/images/logo.png') no-repeat center center;
     background-size: contain;
-    height: 128px;
-    width: 128px;
+    height: 64px;
+    width: 64px;
+    @include transition(width 0.5s, height 0.5s);
     display: inline-block;
-    margin-top: 32px;
     vertical-align: bottom;
   }
-  .links {
+  .linksFull,
+  .linksShort {
+    @include transition(visibility 0.5s, opacity 0.5s);
     position: absolute;
     bottom: 32px;
     left: 32px;
     text-align: left;
+    font-size: 12px;
+  }
+  .linksFull {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .linksShort {
+    visibility: visible;
+    opacity: 1;
   }
   a {
     color: $primary;
@@ -27,6 +54,39 @@
     margin: 8px 0;
     &:hover {
       color: $primaryDark;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #navBar {
+    text-align: left;
+    box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.08);
+    .logo,
+    &:hover .logo {
+      height: 48px;
+      width: 48px;
+      vertical-align: bottom;
+      margin: 0 16px 0 0;
+    }
+    .linksFull {
+      vertical-align: bottom;
+      visibility: visible;
+      opacity: 1;
+      display: inline-block;
+      position: initial;
+      border-bottom: 2px solid $borderGrey;
+      a {
+        display: inline-block;
+        &:after {
+          content: "/";
+          padding: 0 6px;
+          color: $textGrey;
+        }
+      }
+    }
+    .linksShort {
+      display: none;
     }
   }
 }

@@ -8,13 +8,27 @@ class LetterWorld extends React.Component {
   constructor(props) {
     super(props);
     this.model = {
-      validLetters: 'abcdefghijklmnopqrstuvwxyz'
+      validLetters: 'abcdefghijklmnopqrstuvwxyz',
+      defaultLetter: 'm'
     };
     this.state = {
-      currentLetter: 'f'
+      currentLetter: this.model.defaultLetter
     };
 
+    this.nextLetter = this.nextLetter.bind(this);
     this.onInput = this.onInput.bind(this);
+  }
+
+  nextLetter() {
+    const curLetter = this.state.currentLetter;
+    let index = this.model.validLetters.indexOf(curLetter);
+    if (index === this.model.validLetters.length - 1) {
+      index = -1;
+    }
+    const nextLetter = this.model.validLetters[index + 1];
+    this.setState({
+      currentLetter: nextLetter
+    });
   }
 
   onInput(e) {
@@ -22,7 +36,7 @@ class LetterWorld extends React.Component {
     const curChar = $target.val().slice(-1).toLowerCase().trim();
     if (!curChar) {
       this.setState({
-        currentLetter: 'f'
+        currentLetter: this.model.defaultLetter
       });
     } else if (this.model.validLetters.indexOf(curChar) > -1) {
       this.setState({
@@ -34,8 +48,8 @@ class LetterWorld extends React.Component {
   render() {
     return (
       <div className='letterWorld'>
+        <div className="image" style={{'backgroundImage': `url(images/letterWorld/${this.state.currentLetter}.png)`}} onClick={this.nextLetter} />
         <input type="text" name="letter" placeholder="Type to navigate" onInput={this.onInput}/>
-        <div className="image" style={{'backgroundImage': `url(images/letterWorld/${this.state.currentLetter}.png)`}} />
       </div>
     );
   }
