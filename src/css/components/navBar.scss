@@ -2,18 +2,31 @@
 
 #navBar {
   padding: 16px;
-  border-bottom: 1px solid white;
+  text-align: center;
+  background-color: white;
   .logo {
-    background: url('../../images/logo.png') no-repeat center center;
+    background: url('/images/logo.png') no-repeat center center;
     background-size: contain;
-    height: 64px;
-    width: 64px;
+    height: 128px;
+    width: 128px;
     display: inline-block;
-    margin-right: 8px;
+    margin-top: 32px;
     vertical-align: bottom;
   }
+  .links {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    text-align: left;
+  }
   a {
-    padding: 0 8px;
-    vertical-align: bottom;
+    color: $primary;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: block;
+    margin: 8px 0;
+    &:hover {
+      color: $primaryDark;
+    }
   }
 }

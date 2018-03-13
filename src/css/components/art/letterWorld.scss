@@ -1,0 +1,18 @@
+@import '../../mixin.scss';
+
+.letterWorld {
+  input,
+  .image {
+    vertical-align: bottom;
+    display: inline-block;
+  }
+  input {
+    margin-right: 16px;
+  }
+  .image {
+    @include transition(background 0.5s);
+    height: 360px;
+    width: 360px;
+    background-size: contain;
+  }
+}
