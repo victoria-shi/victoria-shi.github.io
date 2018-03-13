@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import $ from 'jquery'; 
+import $ from 'jquery';
+
+import ImageCarousel from 'javascripts/components/art/imageCarousel.jsx';
 
 import 'css/components/art/letterWorld.scss';
 
@@ -9,8 +11,10 @@ class LetterWorld extends React.Component {
     super(props);
     this.model = {
       validLetters: 'abcdefghijklmnopqrstuvwxyz',
-      defaultLetter: 'm'
+      defaultLetter: 'm',
+      images: []
     };
+    this.model.images = this.model.validLetters.split('').map((letter) => `/images/letterWorld/${letter}.png`);
     this.state = {
       currentLetter: this.model.defaultLetter
     };
@@ -48,7 +52,7 @@ class LetterWorld extends React.Component {
   render() {
     return (
       <div className='letterWorld'>
-        <div className="image" style={{'backgroundImage': `url(images/letterWorld/${this.state.currentLetter}.png)`}} onClick={this.nextLetter} />
+        <ImageCarousel images={this.model.images} index={this.model.validLetters.indexOf(this.state.currentLetter)}/>
         <input type="text" name="letter" placeholder="Type to navigate" onInput={this.onInput}/>
       </div>
     );

@@ -1,13 +1,40 @@
+@import '../../variables';
 @import '../../mixin';
 
 .imageCarousel {
   .image {
     cursor: pointer;
-    width: 480px;
-    height: 320px;
+    width: 360px;
+    height: 360px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     @include transition(background 0.5s);
+  }
+  .nav {
+    font-size: 12px;
+    .prev, .next {
+      cursor: pointer;
+      color: $primary;
+      padding: 4px;
+      &:hover {
+        color: $primaryDark;
+      }
+    }
+    .prev,
+    .next,
+    .label {
+      display: inline-block;
+    }
+    .label {
+      span {
+        margin: 0 4px;
+        color: $textGrey;
+        &.currentIndex {
+          color: black;
+        }
+      }
+      margin: 0 16px;
+    }
   }
 }

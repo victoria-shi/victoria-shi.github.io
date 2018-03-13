@@ -2,6 +2,7 @@
 @import '../mixin.scss';
 
 #navBar {
+  z-index: 10;
   padding: 16px;
   text-align: center;
   background-color: white;

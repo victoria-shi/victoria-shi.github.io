@@ -2,19 +2,11 @@
 
 .letterWorld {
   input,
-  .image {
+  .imageCarousel {
     vertical-align: middle;
     display: inline-block;
   }
   input {
-    margin: 16px 0;
-  }
-  .image {
-    cursor: pointer;
-    margin-right: 16px;
-    @include transition(background 0.5s);
-    height: 360px;
-    width: 360px;
-    background-size: contain;
+    margin: 16px;
   }
 }
