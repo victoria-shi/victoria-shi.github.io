@@ -10,7 +10,10 @@ class AboutMePage extends React.Component {
   render() {
     return (
       <PageLayout>
-        <div className="aboutMe">About me</div>
+        <div className="aboutMe">
+          <iframe src="https://player.vimeo.com/video/216193075" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <p>Hi! I'm Victoria Shi.</p>
+        </div>
       </PageLayout>
     )
   }
