@@ -134,8 +134,10 @@ class GithubContributionsGraph extends React.Component {
     }
     return (
       <div className="githubContributionsGraph">
-        <div className="graph">
-          {graphContent}
+        <div className="graphContainer">
+          <div className="graph">
+            {graphContent}
+          </div>
         </div>
         {infoContent}
       </div>
