@@ -4,14 +4,15 @@
 .imageCarousel {
   .image {
     cursor: pointer;
-    width: 360px;
-    height: 360px;
+    width: 480px;
+    height: 320px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: left bottom;
     @include transition(background 0.5s);
   }
   .nav {
+    margin-top: 8px;
     font-size: 12px;
     .prev, .next {
       cursor: pointer;

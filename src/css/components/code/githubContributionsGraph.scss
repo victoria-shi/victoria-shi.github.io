@@ -48,7 +48,10 @@
       bottom: 0;
     }
   }
-  .graph {
+  .header {
+    .day {
+      cursor: default;
+    }
   }
   .week {
     display: block;
@@ -57,12 +60,18 @@
     display: inline-block;
     height: 16px;
     width: 16px;
-    margin: 4px;
+    padding: 4px;
     text-align: center;
+    cursor: pointer;
+    &:hover {
+      .dot {
+        background: $primary;
+        border: 1px solid $primary;
+      }
+    }
     .dot {
       box-sizing: border-box;
       @include transition(background 0.25s);
-      cursor: pointer;
       border-radius: 100%;
       margin: 0 auto;
       display: inline-block;
@@ -71,10 +80,6 @@
       &.hollow {
         border: 1px solid $borderGrey;
         background: transparent;
-      }
-      &:hover {
-        background: $primary;
-        border: 1px solid $primary;
       }
     }
   }

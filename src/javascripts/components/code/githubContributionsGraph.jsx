@@ -30,6 +30,7 @@ class GithubContributionsGraph extends React.Component {
     this.selectDay = this.selectDay.bind(this);
     this.renderDay = this.renderDay.bind(this);
     this.renderWeek = this.renderWeek.bind(this);
+    this.renderHeader = this.renderHeader.bind(this);
   }
 
   fetchCalendar(callback) {
@@ -78,12 +79,11 @@ class GithubContributionsGraph extends React.Component {
     const level = this.model.legend.indexOf(data.fill);
     const dotSize = MINSIZE + (level * 2);
     return (
-      <div key={index} className="day">
-        <div className={`dot ${level === 0 ? 'hollow' : '' }`}
-          style={{height: dotSize, width: dotSize}}
-          onMouseOver={() => { this.selectDay(data); }}
-          onMouseOut={() => { this.clearDay(); }}
-        />
+      <div key={index} className="day"
+        onMouseOver={() => { this.selectDay(data); }}
+        onMouseOut={() => { this.clearDay(); }}
+      >
+        <div className={`dot ${level === 0 ? 'hollow' : '' }`} style={{height: dotSize, width: dotSize}}/>
       </div>
     );
   }
@@ -100,6 +100,16 @@ class GithubContributionsGraph extends React.Component {
     );
   }
 
+  renderHeader() {
+    const days = ['S', 'S', 'M', 'T', 'W', 'T', 'F'];
+    const daysContent = days.map((day, index) => {
+      return ( <div key={index} className="day">{day}</div>);
+    });
+    return (
+      <div key={-1} className="header">{daysContent}</div>
+    );
+  }
+
   render() {
     const self = this;
     let graphContent = false;
@@ -107,6 +117,7 @@ class GithubContributionsGraph extends React.Component {
       graphContent = this.model.weeks.map((weekData, index) => {
         return self.renderWeek(weekData, index);
       });
+      graphContent.unshift(this.renderHeader());
     }
     let infoContent = false;
     if (!$.isEmptyObject(this.state.dayInfo)) {
