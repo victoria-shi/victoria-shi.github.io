@@ -4,8 +4,6 @@ import $ from 'jquery';
 
 import PageLayout from 'javascripts/components/pageLayout.jsx';
 
-import 'css/library/github-calendar.css';
-
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
