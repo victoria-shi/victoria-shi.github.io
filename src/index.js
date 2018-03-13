@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route } from 'react-router';
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter as Router, Route } from 'react-router-dom'
 
 import HomePage from './javascripts/components/homePage.jsx';
 import ResumePage from './javascripts/components/resumePage.jsx';
@@ -11,15 +10,15 @@ import 'css/global.scss';
 
 const routes = [
   (<Route exact path="/" key="home" component={HomePage} />),
-  (<Route exact path="/resume" key="resume" component={ResumePage} />),
+  (<Route path="/resume" key="resume" component={ResumePage} />),
   (<Route path="/about" key="aboutMe" component={AboutMePage} />)
 ];
 
 
 ReactDOM.render((
-  <BrowserRouter>
+  <Router baseName="/">
     <div>
       {routes}
     </div>
-  </BrowserRouter>
+  </Router>
 ), document.getElementById('root'));
