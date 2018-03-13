@@ -24,6 +24,8 @@
     "fs-extra": "3.0.1",
     "git-contributions": "^1.0.1",
     "github-calendar": "^1.2.1",
+    "github-calendar-legend": "^1.0.9",
+    "github-calendar-parser": "^1.1.9",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
     "jquery": "^3.3.1",

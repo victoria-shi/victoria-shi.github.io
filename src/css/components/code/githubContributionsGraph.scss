@@ -1,0 +1,50 @@
+@import '../../variables';
+
+.githubContributionsGraph {
+  .graph,
+  .graphInfo {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .graphInfo {
+    box-sizing: border-box;
+    padding: 32px;
+    width: calc(100% - 200px);
+    .dateInfo,
+    .commits {
+      margin: 32px 0;
+    }
+    .dateInfo .date,
+    .commits .num {
+      border: 2px solid $primary;
+      padding: 8px;
+      color: $primary;
+    }
+  }
+  .week {
+    display: block;
+  }
+  .day {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin: 4px;
+    text-align: center;
+    .dot {
+      cursor: pointer;
+      border-radius: 100%;
+      margin: 0 auto;
+      display: inline-block;
+      background: black;
+      vertical-align: middle;
+      &.hollow {
+        border: 1px solid $borderGrey;
+        background: transparent;
+      }
+      &:hover {
+        background: $primary;
+        border: none;
+      }
+    }
+  }
+}

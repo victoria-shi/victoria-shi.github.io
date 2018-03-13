@@ -4,7 +4,7 @@ import $ from 'jquery';
 import PageLayout from 'javascripts/components/pageLayout.jsx';
 import GithubContributionsGraph from 'javascripts/components/code/githubContributionsGraph.jsx';
 
-class HomePage extends React.Component {
+class CodePage extends React.Component {
   constructor(props) {
     super(props);
     this.elements = {};
@@ -13,12 +13,12 @@ class HomePage extends React.Component {
   render() {
     return (
       <PageLayout>
-        <div className="homePage">
-          Home
+        <div className="codePage">
+          <GithubContributionsGraph />
         </div>
       </PageLayout>
     )
   }
 }
 
-export default HomePage;
+export default CodePage;
