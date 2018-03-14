@@ -9,7 +9,7 @@
   }
   .graphInfo {
     box-sizing: border-box;
-    padding: 32px;
+    margin-top: 32px;
     width: calc(100% - 200px);
     .dateInfo,
     .commits {
@@ -20,6 +20,10 @@
       border: 2px solid $primary;
       padding: 8px;
       color: $primary;
+      &.disabled {
+        border-color: $borderGrey;
+        color: $borderGrey;
+      }
     }
   }
   .graphContainer {
@@ -27,7 +31,9 @@
     height: 640px;
     max-height: 100vh;
     overflow: hidden;
+    margin-right: 12px;
     .graph {
+      padding-right: 12px;
       position: relative;
       height: 100%;
       overflow: auto;
@@ -68,6 +74,9 @@
       .dot {
         background: $primary;
         border: 1px solid $primary;
+        &.hollow {
+          border: 1px solid $primary;
+        }
       }
     }
     .dot {

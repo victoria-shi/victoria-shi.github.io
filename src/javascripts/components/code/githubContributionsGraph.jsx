@@ -76,8 +76,9 @@ class GithubContributionsGraph extends React.Component {
   renderDay(data, index) {
     const MINSIZE = 8;
     const MAXSIZE = 16;
+    const stepSize = (MAXSIZE - MINSIZE) / (this.model.legend.length - 1);
     const level = this.model.legend.indexOf(data.fill);
-    const dotSize = MINSIZE + (level * 2);
+    const dotSize = MINSIZE + (level * stepSize);
     return (
       <div key={index} className="day"
         onMouseOver={() => { this.selectDay(data); }}
@@ -124,10 +125,10 @@ class GithubContributionsGraph extends React.Component {
       infoContent = (
         <div className="graphInfo">
           <div className="dateInfo">
-            Contributions on <span className="date">{this.state.dayInfo.date.toDateString()}</span>
+            Contributions on <span className={`date ${this.state.dayInfo.count === 0 ? 'disabled' : ''}`}>{this.state.dayInfo.date.toDateString()}</span>
           </div>
           <div className="commits">
-            <span className="num">{this.state.dayInfo.count}</span> contributions
+            <span className={`num ${this.state.dayInfo.count === 0 ? 'disabled' : ''}`}>{this.state.dayInfo.count}</span> contributions
           </div>
         </div>
       )
