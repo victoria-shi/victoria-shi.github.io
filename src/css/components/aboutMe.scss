@@ -18,5 +18,20 @@
       line-height: 150%;
       margin-bottom: 12px;
     }
+    .links {
+      .linkInfo {
+        color: $textGrey;
+        margin-top: 8px;
+        display: block;
+      }
+      a {
+        margin-right: 4px;
+        border-bottom: 1px solid $primary;
+        &:hover {
+          color: black;
+          border-bottom: 1px solid black;
+        }
+      }
+    }
   }
 }

@@ -18,6 +18,10 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
   color: black;
 }
 
+.hidden {
+  display: none !important;
+}
+
 a {
   color: $primary;
   font-weight: 500;
@@ -48,7 +52,6 @@ h3 {
 h4 {
   font-size: 16px;
 }
-
 
 input, textarea {
   padding: 8px;
