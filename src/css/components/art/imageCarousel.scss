@@ -2,13 +2,14 @@
 @import '../../mixin';
 
 .imageCarousel {
+  text-align: center;
   .image {
     cursor: pointer;
     width: 480px;
     height: 320px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: left bottom;
+    background-position: center center;
     @include transition(background 0.5s);
   }
   .nav {
