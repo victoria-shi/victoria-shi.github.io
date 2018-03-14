@@ -1,0 +1,22 @@
+@import '../variables.scss';
+.aboutMe {
+  img {
+    width: 240px;
+    height: auto;
+    display: inline-block;
+  }
+  .bio {
+    width: calc(100% - 240px - 24px);
+    max-width: 480px;
+    margin-left: 24px;
+    display: inline-block;
+    vertical-align: top;
+    h1 {
+      margin-bottom: 24px;
+    }
+    p {
+      line-height: 150%;
+      margin-bottom: 12px;
+    }
+  }
+}

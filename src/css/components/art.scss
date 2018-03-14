@@ -5,14 +5,13 @@
     display: inline-block;
     vertical-align: middle;
     padding: 32px 0;
-    margin: 0 48px;
+    margin-right: 48px;
     .info {
       margin-top: 32px;
       text-align: center;
       text-transform: uppercase;
       .index, .title {
         display: inline-block;
-        font-size: 12px;
       }
       .index {
         border: 2px solid $primary;

@@ -19,14 +19,36 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 }
 
 a {
+  color: $primary;
+  font-weight: 500;
   &:link,
   &:visited,
   &:hover,
   &:active {
     text-decoration: none;
-    color: black;
+  }
+  &:hover {
+    color: $primaryDark;
   }
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 22px;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 16px;
+}
+
 
 input, textarea {
   padding: 8px;
