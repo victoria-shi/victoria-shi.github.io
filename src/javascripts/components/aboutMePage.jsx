@@ -15,8 +15,9 @@ class AboutMePage extends React.Component {
         { text: 'funny', url: 'https://twitter.com/JanelleCShane/status/969239712190746624', title: 'Do neural nets dream of sheep?' },
         { text: 'programming', url: 'http://localstarboy.tumblr.com/post/171295891812/what-people-think-programming-is-vs-how-it', title: 'Programming: expectations vs reality' },
         { text: 'things', url: 'https://xkcd.com/1883/', title: 'XKCD: Supervillain Plan', title: 'XKCD: Supervillain Plan' },
-        { text: '(these are', url: 'https://xkcd.com/323/', title: 'XKCD: Ballmer Peak' },
-        { text: 'all links!).', url: 'https://sharenator.com/Developer_s_Reaction_Gifs/', title: 'Developer Reaction GIFs' },
+        { text: '(these', url: 'https://xkcd.com/323/', title: 'XKCD: Ballmer Peak' },
+        { text: 'are all', url: 'https://www.reddit.com/r/Ooer/', title: 'The power of CSS...' },
+        { text: 'links!).', url: 'https://sharenator.com/Developer_s_Reaction_Gifs/', title: 'Developer Reaction GIFs' },
       ],
       inspirationLinks: [
         { text: 'And', url: 'http://www.ignasimonreal.com/', title: 'Ignasi Monreal' },
