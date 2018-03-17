@@ -1,44 +1,70 @@
 @import '../variables.scss';
 
 .resume {
-  display: flex;
-  flex-wrap: wrap;
+  min-width: 520px;
+  max-width: 720px;
   .resumeSection {
-    flex-grow: 1;
-    margin: 16px;
+    box-sizing: border-box;
+    vertical-align: top;
+    display: inline-block;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    padding-right: 32px;
     .index {
-      display: inline-block;
-      padding: 8px;
-      border: 2px solid $primary;
-      font-size: 12px;
-      margin: 0 8px 16px 0;
+      font-size: 24px;
+      display: block;
+      margin-right: 8px;
       font-weight: 500;
       vertical-align: middle;
+      margin-bottom: 8px;
     }
     > .title {
-      font-size: 12px;
-      text-transform: uppercase;
+      border-top: 2px solid $borderGrey;
+      border-bottom: 2px solid $borderGrey;
+      padding: 16px 0;
       vertical-align: middle;
-      display: inline-block;
+      display: block;
       text-align: center;
-      margin-bottom: 16px;
       font-weight: 500;
     }
+    &.education,
+    &.stack,
+    &.software,
+    &.contact {
+      width: 33%;
+    }
     &.experience {
-      flex-grow: 2;
+      width: 65%;
+    }
+    span {
+      display: inline-block;
+      &:after {
+        content : "/";
+        margin: 0 4px;
+        color: $textGrey;
+      }
+    }
+    a, p, ul, li {
+      line-height: 150%;
     }
     ul {
       margin-left: 24px;
     }
+    .content {
+      margin-top: 16px;
+    }
+    a {
+      display: block;
+    }
   }
   .roleSection {
-    padding: 8px 0;
-    &:not(:last-of-type) {
-      border-bottom: 2px solid $borderGrey;
-    }
-    .title,
-    .dates {
+    padding: 16px 0;
+    .title {
       font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .dates  {
+      margin-bottom: 8px;
     }
   }
 }
