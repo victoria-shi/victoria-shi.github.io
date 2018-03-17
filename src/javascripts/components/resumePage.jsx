@@ -16,12 +16,13 @@ class ResumePage extends React.Component {
           company: 'HealthTap',
           dates: [new Date(2016, 6), new Date()],
           description: [
-            { text: 'Build and maintain the HealthTap web app.' },
+            { text: 'Build, architect, and maintain the HealthTap web app.' },
+            { text: 'Develop fluently in both React and native Javascript / jQuery.' },
             {
               text: 'Technical lead, Interactive Care Plans product',
               class: 'bold',
               description: [
-                { text: 'Own and drive the entire engineering effort.' },
+                { text: 'Own and drive all development work.' },
                 { text: 'Coordinate 15+ engineers to successfully deliver the product on time.' }
               ]
             },
@@ -29,8 +30,7 @@ class ResumePage extends React.Component {
               text: 'Frontend team lead, globalization and internationalization',
               class: 'bold',
               description: [
-                { text: 'Enable translation of site into Mandarin Chinese, Spanish, and other languages.' },
-                { text: 'Enable localization of dates and times, currencies, and other locale-sensitive information.' },
+                { text: 'Enable translation of all site UI and content into Mandarin Chinese, Spanish, and other languages. Enable localization of dates and times, currencies, and other locale-sensitive information.' },
                 { text: 'Enforce globalization best practices among web team.' }
               ]
             },
@@ -49,7 +49,7 @@ class ResumePage extends React.Component {
           dates: [new Date(2015, 9), new Date(2016, 5)],
           description: [
             { text: 'Design and develop the MyGreenCar web app.' },
-            { text: 'Create design mockups and final designs, images and assets for the project.' },
+            { text: 'Iterate through mockups to pixel-perfect designs. Create all images, icons, and other visual assets.' },
             { text: 'Build front end of the web app.' }
           ]
         },
@@ -59,16 +59,15 @@ class ResumePage extends React.Component {
           dates: [new Date(2015, 5), new Date(2015, 7)],
           description: [
             { text: 'Design and implement new UI/UX for both web and mobile.' },
-            { text: 'Develop iOS app for users to view their Twindom 3D scans.' },
-            { text: 'Wordpress / Magento / Swift' }
+            { text: 'Develop iOS Swift app for users to view their Twindom 3D scans.' }
           ]
         },
         {
-          title: 'Teaching Assistant, CS10 Course',
+          title: 'Teaching Assistant, CS10: The Beauty and Joy of Computing',
           company: 'UC Berkeley',
           dates: [new Date(2014, 0), new Date(2016, 5)],
           description: [
-            { text: 'Lead biweekly labs and weekly discussion sections.' },
+            { text: 'Lead biweekly programming labs and weekly discussion sections.' },
             { text: 'Support students at weekly office hours.' },
             { text: 'Draft and grade class homework, lab assignments, quizzes, projects, and exams.' }
           ]
@@ -137,6 +136,7 @@ class ResumePage extends React.Component {
           <ResumeSection index={5} title='Contact' class="contact">
             <a href="mailto:victoria.shi@berkeley.edu">victoria.shi@berkeley.edu</a>
             <a href="tel:1-626-232-5813">(626) 232-5813</a>
+            <br />
             <p>1375 Montecito Ave Apt. 2</p>
             <p>Mountain View, CA 94043</p>
           </ResumeSection>
