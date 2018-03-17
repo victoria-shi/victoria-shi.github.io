@@ -7,28 +7,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $bgGrey;
   overflow: auto;
-  #content,
-  #navBar {
-    display: inline-block;
-    box-sizing: border-box;
-  }
-  #navBar {
-    @include transition(width 0.25s);
-    transition-timing-function: ease-in;
-    width: 120px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    &:hover {
-      width: 240px;
-    }
-  }
   #content {
-    margin-left: 120px;
-    width: calc(100% - 120px);
     padding: 32px;
   }
 }
@@ -39,14 +19,8 @@
     #navBar {
       display: block;
     }
-    #navBar,
-    #navBar:hover {
-      width: 100%;
-      position: initial;
-    }
     #content {
-      margin: 0;
-      width: 100%;
+      padding: 16px;
     }
   }
 }

@@ -15,19 +15,11 @@ function NavBar(props) {
       <a key={index} href={link.url}>{link.name}</a>
     );
   });
-  const linksShort = links.map((link, index) => {
-    return (
-      <a key={index} href={link.url}>{link.shortName}</a>
-    );
-  });
   return (
     <div id="navBar">
     	<a className="logo" href="/"></a>
       <div className="linksFull">
         {linksFull}
-      </div>
-      <div className="linksShort">
-        {linksShort}
       </div>
     </div>
   );

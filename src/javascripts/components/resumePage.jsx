@@ -87,7 +87,7 @@ class ResumePage extends React.Component {
       return (<li key={index}>{data.text}</li>);
     }
     return (
-      <div>
+      <div key={index}>
         <li className={data.class || ''}>{data.text}</li>
         <li style={{ listStyleType: 'none' }}>
           <ul>{content}</ul>
@@ -116,14 +116,26 @@ class ResumePage extends React.Component {
             <p>May 2016</p>
           </ResumeSection>
           <ResumeSection index={2} title='Stack' class="stack">
-            <span>Javascript</span>
-            <span>jQuery</span>
-            <span>React</span>
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>Sass</span>
-            <span>Rails</span>
-            <span>Python</span>
+            <div>
+              <span>Javascript</span>
+              <span>jQuery</span>
+              <span>React</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>Sass</span>
+            </div>
+            <div>
+              <span>Webpack</span>
+              <span>Grunt</span>
+            </div>
+            <div>
+              <span>Rails</span>
+              <span>Python</span>
+            </div>
+            <div>
+              <span>Git</span>
+            </div>
+
           </ResumeSection>
           <ResumeSection index={3} title='Software' class="software">
             <span>Adobe Creative Suite</span>

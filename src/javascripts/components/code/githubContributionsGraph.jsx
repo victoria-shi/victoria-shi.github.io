@@ -1,7 +1,5 @@
 import React from 'react';
 import $ from 'jquery';
-// import GitHubCalendar from 'github-calendar';
-
 import CalendarParser from 'github-calendar-parser';
 
 import 'css/components/code/githubContributionsGraph.scss';
@@ -34,8 +32,6 @@ class GithubContributionsGraph extends React.Component {
   }
 
   fetchCalendar(callback) {
-    // console.log('legend');
-    // console.log(Legend);
     const self = this;
     fetch("https://urlreq.appspot.com/req?method=GET&url=https://github.com/victoria-shi").then(response => {
       return response.text();
@@ -118,7 +114,6 @@ class GithubContributionsGraph extends React.Component {
       graphContent = this.model.weeks.map((weekData, index) => {
         return self.renderWeek(weekData, index);
       });
-      graphContent.unshift(this.renderHeader());
     }
     let infoContent = false;
     if (!$.isEmptyObject(this.state.dayInfo)) {
@@ -147,6 +142,7 @@ class GithubContributionsGraph extends React.Component {
     return (
       <div className="githubContributionsGraph">
         <div className="graphContainer">
+          {this.renderHeader()}
           <div className="graph">
             {graphContent}
           </div>

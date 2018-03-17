@@ -86,14 +86,14 @@ class AboutMePage extends React.Component {
             <h1>This is fine!<a href="http://gunshowcomic.com/648" target="_blank">*</a></h1>
             <p>Hey! I'm Victoria Shi. I'm a front end engineer. I graduated from UC Berkeley in 2016 with a degree in Computer Science, and have been working in the Bay Area since.</p>
             <p>Besides programming, I'm also interested in art, design, and film.</p>
-            <p className="links">
+            <div className="links">
               {humor}
               <span className={`linkInfo ${this.state.humorLink ? '' : 'hidden'}`}>{this.state.humorLink}</span>
-            </p>
-            <p className="links">
+            </div>
+            <div className="links">
               {inspiration}
               <span className={`linkInfo ${this.state.inspirationLink ? '' : 'hidden'}`}>{this.state.inspirationLink}</span>
-            </p>
+            </div>
             <p>Let's get to know each other! Email me at <a href="mailto:victoria.shi@berkeley.edu">victoria.shi@berkeley.edu</a></p>
             <p>Or, find me on <a href="https://www.linkedin.com/in/vshiberkeley/" target="_blank">LinkedIn</a>, <a href="https://github.com/victoria-shi" target="_blank">Github</a>, or <a href="https://www.behance.net/vshi" target="_blank">Behance</a>.</p>
           </div>

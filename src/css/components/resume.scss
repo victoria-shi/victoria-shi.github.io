@@ -1,7 +1,6 @@
 @import '../variables.scss';
 
 .resume {
-  min-width: 520px;
   max-width: 720px;
   .resumeSection {
     box-sizing: border-box;
@@ -38,10 +37,12 @@
     }
     span {
       display: inline-block;
-      &:after {
-        content : "/";
-        margin: 0 4px;
-        color: $textGrey;
+      &:not(:last-of-type) {
+        &:after {
+          content : "/";
+          margin: 0 4px;
+          color: $textGrey;
+        }
       }
     }
     a, p, ul, li {
@@ -65,6 +66,15 @@
     }
     .dates  {
       margin-bottom: 8px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .resume .resumeSection {
+    &.education, &.stack, &.software, &.contact, &.experience {
+      padding-right: 0;
+      width: 100%;
     }
   }
 }

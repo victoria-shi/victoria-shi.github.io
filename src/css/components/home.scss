@@ -1,0 +1,74 @@
+@import '../variables.scss';
+@import '../mixin.scss';
+
+$octopusSize: 96px;
+
+.homePage {
+  .logoContainer {
+    display: block;
+    text-align: center;
+    padding-bottom: 32px;
+  }
+  .logo {
+    background: url('/images/logo.png') no-repeat center center;
+    background-size: contain;
+    height: 48px;
+    width: 48px;
+    display: inline-block;
+  }
+  .sectionContainer {
+    text-align: center;
+  }
+  .section:first-of-type {
+
+  }
+  .section {
+    text-align: center;
+    box-sizing: border-box;
+    padding: calc((100vh - 32px - 48px - 32px - 96px - 24px - 18px - 32px) / 2) 0;
+    width: calc(20% - 8px);
+    max-width: 200px;
+    margin-right: 8px;
+    display: inline-block;
+    background-color: $primary;
+    cursor: pointer;
+    &:first-of-type {
+      
+    }
+    .text {
+      margin-top: 24px;
+      color: white;
+    }
+    .fill {
+      margin: 0 auto;
+      background-color: white;
+      @include transition(background 0.5s);
+      height: $octopusSize;
+      width: $octopusSize;
+      &.dark {
+        background-color: black;
+      }
+      img {
+        height: $octopusSize;
+        width: $octopusSize;
+      }
+    }
+    &:hover {
+      .fill {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .homePage {
+    .section {
+      display: block;
+      width: 100%;
+      padding: 24px 0;
+      max-width: none;
+      margin-bottom: 8px;
+    }
+  }
+}

@@ -14,24 +14,42 @@
     h1 {
       margin-bottom: 24px;
     }
-    p {
+    p{
       line-height: 150%;
       margin-bottom: 12px;
     }
     .links {
+      margin-bottom: 12px;
       .linkInfo {
         color: $textGrey;
         margin-top: 8px;
         display: block;
       }
       a {
+        display:inline-block;
         margin-right: 4px;
+        margin-bottom: 4px;
         border-bottom: 1px solid $primary;
         &:hover {
           color: black;
           border-bottom: 1px solid black;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutMe {
+    img {
+      width: 160px;
+      margin: 0 auto;
+      display: block;
+    }
+    .bio {
+      margin: 16px 0 0 0;
+      display: block;
+      width: 100%;
     }
   }
 }

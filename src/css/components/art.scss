@@ -1,6 +1,7 @@
 @import '../variables.scss';
 .art {
   white-space: nowrap;
+  overflow: auto;
   .artSection {
     display: inline-block;
     vertical-align: middle;

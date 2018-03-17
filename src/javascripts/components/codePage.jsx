@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 
 import PageLayout from 'javascripts/components/pageLayout.jsx';
 import GithubContributionsGraph from 'javascripts/components/code/githubContributionsGraph.jsx';
